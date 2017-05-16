@@ -4,13 +4,13 @@
 ## makeCacheMatrix function create a matrix object which can cache the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-	inv <- NULL  #intialize inverse
+	invr <- NULL  #intialize inverse
 	
-	#Set value, and set inv=NULL whenever set value
+	#Set value, and set invr=NULL whenever set value
 	
 	set <- function(y) {
                 x <<- y
-                inv <<- NULL
+                invr <<- NULL
     }
 	
 	#get value
@@ -19,11 +19,11 @@ makeCacheMatrix <- function(x = matrix()) {
 	}
 	
     setInverse <- function(inverse){
-				inv <<- inverse  #Set the inverse
+				invr <<- inverse  #Set the inverse
 	}
 	
     getInverse <- function(){
-				inv   #get the inverse
+				invr   #get the inverse
 	}
 	#Return list
     list(set = set,
